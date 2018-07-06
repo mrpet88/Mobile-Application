@@ -1,0 +1,35 @@
+body {
+    font-family: "Gill Sans MT";
+    height: 100vh;
+    background: rgba(46, 139, 87);
+    background-image: url(nysl_logo.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+.blackTransparentBox{
+    height: 100vh;
+    width: 100%;
+     background: rgba(0, 0, 0,0.4);
+}
+.menuBar{
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 45px;
+    color: white;
+    border: solid 1px black;
+    background-color: rgba(13,152,186,0.8);
+    width: 100%;
+    z-index: 1;
+}
+.bottomBar{
+    position: fixed;
+    bottom: 0px;
+    padding-bottom: 60px;
+    height: 60px;
+    border: solid 1px black;
+    background-color: rgba(13,152,186);
+    width: 100%;
+    z-index: 1;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/c1b911fdb1.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesTable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title> Index Vue </title>
+</head>
+
+<body>
+    <div id="VueMain">
+       
+       <div v-for="themonth in months" v-for="theday in months" class="box">
+          <p>{{ themonth.month}} {{theday}}</p>
+           <div v-for="(theday) in themonth.days"class="firstRow">
+           <p>{{theday["01"].game1}}</p>
+           <p>{{theday["01"].location1}}</p>
+           <p>{{theday["01"].time1}}</p>
+           </div>
+<!--
+           <div class="secRow">
+           <p>{{day["1"]}}</p>
+           <p>{{day["2"]}}</p>
+           <p>{{day["3"]}}</p>
+           </div>
+-->
+       </div>
+<!--
+             
+              <div class="box">
+
+        <p>Sep 9/01</p>
+           <div class="firstRow">
+           <p>U1 and U4</p>
+           <p>location</p>
+           <p>time</p>
+           </div>
+           <div class="secRow">
+           <p>U1 and U4</p>
+           <p>location</p>
+           <p>time</p>
+           </div>
+        </div>
+-->
+<!--
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>September</th>
+                    <th>Teams</th>
+                    <th>Location</th>
+                    <th>Times</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="day in days">
+                   <td>{{day["0"]}</td>
+                   <td>{{day["1"]}</td>
+                   <td>{{day["2"]}</td>
+                   <td>{{day["3"]}</td>
+                 </tr>
+            </tbody>
+            
+        </table>
+-->
+       
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js "></script>
+<script src="mainTable.js "></script>
+
+</html>

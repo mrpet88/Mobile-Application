@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" sizes="128x128" href="app_icon128.png">
+    <link rel="shortcut icon" sizes="128x128" href="GooglePlayStore.png">
+    <link rel="shortcut icon" sizes="128x128" href="hdpi.png">
+    <link rel="shortcut icon" sizes="128x128" href="ldpi.png">
+    <link rel="shortcut icon" sizes="128x128" href="mdpi.png">
+    <link rel="shortcut icon" sizes="128x128" href="xhdpi.png">
+    <link rel="shortcut icon" sizes="128x128" href="xxhdpi.png">
+    <link rel="shortcut icon" sizes="128x128" href="xxxhdpi.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/c1b911fdb1.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title> NYSL </title>
+</head>
+
+<body>
+    <div id="VueMain">
+        <div>
+            <div id="one" class="menuBar">
+                    <a v-if="arrowLeft" v-on:click="goToPreviousScreen"><i class="fas fa-caret-left"></i></a>
+                    <p class="welcomeHeader">{{message}}</p>
+                    <i @click="logOut" v-if="logOutIcon" class="fas fa-sign-out-alt"></i>
+                </div>
+        </div>
+        <div v-if="showNYSLWelcomeScreen" class="shieldAndMapsAndSchedule">
+            <a class="alignSelf" v-on:click='changeDisplayToTeams'>
+        <i class="fas fa-shield-alt"></i>
+        <p class="teamsFont colorWhite">Teams</p>
+        </a>
+            <a class="alignSelf" v-on:click='changeDisplayToMaps'>
+        <i class="fas fa-map"></i><p class="colorWhite" >Locations</p>
+        </a>
+
+            <a class="alignSelf" v-on:click='changeDisplayToSchedule'>
+       <i class="fas fa-calendar-alt"></i><p class="colorWhite">Schedule</p>
+        </a>
+        </div>
+        <div v-if="notShowInfo" id="moreInfo" class="moreInfo">
+            <p class="textOfCoordinator">Please direct all questions to: Michael Randall, League Coordinator at (630) 690-8132 or at <a href="michael.randall@chisoccer.org">michael.randall@chisoccer.org</a> </p>
+        </div>
+
+
+        <div v-if="notShowTeams" id="two" class="teams">
+            <div v-for="(team,index) in teams" class="eachTeamOption">
+                <a v-on:click="changeDisplayToU(index+1)" class="paragraphAndArrow">
+                    <p>{{team}}</p>
+                 <i class="fas fa-caret-right"></i>
+                </a>
+            </div>
+        </div>
+           <div v-if="notShowChatTeams" class="teams">
+            <div v-for="(team,index) in teams" class="eachTeamOption">
+                <a v-on:click="changeDisplayToUChat(index+1)" class="paragraphAndArrow">
+                    <p>{{team}}</p>
+                    <i class="fas fa-caret-right"></i>
+                </a>
+            </div>
+            </div>
+<div v-if="notShowChatRoom" class="chat box">
+    <div id="posts" v-for='post in posts'>
+        <template v-if="post.name == myUserName">
+                 <div class="profilePicName">
+                  <img :src="post.profileImage" alt="" class="rounded-circle">
+                <p class="postName text-muted">{{post.name}} </p>
+                  </div>
+                  <div class="textTimestamp">
+                   <div class="loadingPost" >
+                     <p class="postText">{{post.body}} </p> 
+                   </div>                                   
+                   <p class="timestamp text-muted"> {{post.timestamp}}</p>  
+                   </div> 
+            </template>
+        <template v-else>
+                   <div class="profilePicNameOther">
+                  <img :src="post.profileImage" alt="" class="rounded-circle">
+                <p class="postName text-muted">{{post.name}} </p>
+                  </div>
+                  <div class="anotherFlex">
+                <div class="textTimestampOther">
+                   <div class="loadingPostOther">
+                     <p class="postText">{{post.body}}</p> 
+                </div>
+                <p class="timestamp text-muted"> {{post.timestamp}}</p>
+            </div>
+               </div>
+                </template>
+    </div>
+    <div class="inputs">
+        <input id="textInput" class="input" type="text" placeholder="Your message...">
+        <a v-on:click="writeNewPost" id="create-post" class="foo fas fa-chevron-circle-right"></a>
+    </div>
+</div>
+        <div v-if="notShowEachTeamSchedule" class="flow">
+            <template v-for="themonth in months">
+          <table class="table marginBottom table-sm table-dark table-hover">
+            <thead class="thead-light text-center">
+                <tr>
+                    <th>{{ themonth.month }}</th>
+                    <th>Teams</th>
+                    <th>Location</th>
+                    <th>Times</th>
+                </tr>
+            </thead>
+            <tbody v-for="(theeachDay) in themonth.eachDay" class="text-center">
+               <template v-if='findTeamInEachDay(theeachDay["1"])'>
+                <tr>
+
+                    <td>{{theeachDay["0"]}}</td>
+                    <td>{{theeachDay["1"]}}</td>
+                    <td><a class="whiteColor" v-bind:href='theeachDay["4"]'>
+                        {{theeachDay["2"]}}
+                    </a></td>
+                    <td>{{theeachDay["3"]}}</td>
+                </tr>
+                </template>
+            </tbody>
+            </table>
+            </template>
+        </div>
+<!--
+        <div v-if="notShowLogIn" class="logInScreen">
+            <div class="flexMailPassword">
+                <input class="emailPassword" type="text" name="E-mail" placeholder="e-mail">
+                <input class="emailPassword" type="text" name="password" placeholder="Password">
+            </div>
+            <div class="flexRegisterLogIn">
+                <input v-on:click="logOut" class="LogInElementsSize" type="submit" value="Log Out">
+                <input v-on:click="login" id="login" class="LogInElementsSize button is-info" type="submit" value="Log In">
+            </div>
+        </div>
+-->
+        <div class="flow" v-if="notShowSchedule">
+            <table class="table table-sm table-dark table-hover">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>Day</th>
+                        <th>Teams</th>
+                        <th>Location</th>
+                        <th>Times</th>
+                    </tr>
+                </thead>
+                <tbody v-for="themonth in months" class="text-center">
+                    <tr v-for="(theday) in themonth.days">
+
+                        <td>{{theday["0"]}}</td>
+                        <td>{{theday["1"]}}</td>
+                        <td><a class="whiteColor" v-bind:href='theday["4"]'>
+                        {{theday["2"]}}
+                    </a></td>
+                        <td>{{theday["3"]}}</td>
+                    </tr>
+                    <!--
+                <th></th>
+                <tr></tr>
+-->
+                </tbody>
+            </table>
+        </div>
+        <div v-if="notShowMaps" class="allTheLocations">
+            <select class="text-center btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="displaySelectedMap()" id="locationChoise">
+<option selected="selected" value="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6312527!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1snl!2snl!4v1529921617659">AJ Katzenmaier</option>
+  <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686598!2d-87.64002218463192!3d41.91386467921929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3407260c45b%3A0xb351205fae50c6f3!2sGreenbay+Elementary!5e0!3m2!1snl!2snl!4v1529921727575">Greenbay</option>
+  <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585850578759!2d-87.6651101846316!3d41.92326097921857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f852467%3A0xb6cb22b2f0358874!2sHoward+A+Yeager+Elementary!5e0!3m2!1snl!2snl!4v1529921775262">Howard A Yeager</option>
+  <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2898393489722!2d-87.64816138463141!3d41.92962287921815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2637f9d7%3A0xdbff5d5dfcfcfa35!2sMarjorie+P+Hart+Elementary!5e0!3m2!1snl!2snl!4v1529921827716">Marjorie P Hart</option>
+  <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.33554870362!2d-87.64831158463211!3d41.90714487921998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af14860a5%3A0x5736e62f19086c62!2sNorth+Elementary!5e0!3m2!1sen!2snl!4v1529921916281">North</option>
+  <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d536843.7647596224!2d-88.25831650403464!3d41.98586739823682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb7ad3bfd4bef%3A0xa8117f91d1697cd!2sSouth+Elementary+School!5e0!3m2!1sen!2snl!4v1529921997842">South</option>
+</select>
+            <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6312527!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1snl!2snl!4v1529921617659" frameborder="0" style="border:1" allowfullscreen>></iframe>
+        </div>
+        <div class="container-fluid">
+            <div class="row bottomBar">
+        <a class="col-4 click text-left" v-on:click='changeDisplayToChatTeams'>
+   <i v-on:click="login" class="far fa-comment"></i>
+    
+<!--    changeDisplayToChatTeams-->
+    </a>
+                <a class="col-4 click" v-on:click='changeDisplayToHomeScreen'><i class="fas fa-home"></i>
+</a>
+
+                <a class="col-4 text-right click" v-on:click='changeDisplayToInfo'>
+    <i class="fas fa-info"></i>
+    </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCtKgXfsroDVH21OzuX5xaaiVCS9ZWtoK4",
+        authDomain: "my-first-mobile-app-30c66.firebaseapp.com",
+        databaseURL: "https://my-first-mobile-app-30c66.firebaseio.com",
+        projectId: "my-first-mobile-app-30c66",
+        storageBucket: "my-first-mobile-app-30c66.appspot.com",
+        messagingSenderId: "574419951673"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js "></script>
+<script src="main.js"></script>
+<!--<script src="main02.js"></script>-->
+
+</html>

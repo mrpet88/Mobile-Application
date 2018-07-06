@@ -1,0 +1,533 @@
+body {
+    height: 100vh;
+    font-family: "Gill Sans MT";
+    background-image: url(nysl_logo_portrait.jpg);
+    background-repeat: no-repeat;
+    background-color: #1d5435;
+    background-attachment: fixed;
+    background-position: right;
+    padding-bottom: 10%;
+}
+.welcomeHeader{
+    margin-left: auto;
+    margin-right: auto;
+}
+.menuBar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 10%;
+    z-index: 1;
+    background: rgb(6, 74, 94, 0.8);
+    text-align: center;
+    font-size: 38px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-sign-out-alt{
+    align-self: center;
+    font-size: 40px;
+}
+
+
+.shieldAndMapsAndSchedule,
+.moreInfo,
+.teams,
+.logInScreen,
+.allTheLocations,
+.chat{
+    height: 80%;
+}
+.shieldAndMapsAndSchedule{
+    width: 100%;
+    position: fixed;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+.fa-shield-alt,
+.fa-map,
+.fa-calendar-alt {
+    color: white;
+}
+
+.fa-shield-alt:active {
+    color: lemonchiffon;
+}
+
+.fa-map:active {
+    color: lemonchiffon;
+}
+
+.fa-calendar-alt:active {
+    color: lemonchiffon;
+}
+
+.alignSelf {
+    align-self: center;
+}
+
+.colorWhite {
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+.paragraph {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fa-caret-left {
+    font-size: 65px;
+}
+.fa-caret-left:active{
+    color: lemonchiffon;
+}
+
+.fa-shield-alt,
+.fa-map,
+.fa-calendar-alt {
+    font-size: 75px;
+}
+
+.moreInfo {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 10%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.textOfCoordinator{
+    font-size: 20px;
+    background: rgb(6, 74, 94, 0.6);
+    color: white;
+}
+.textOfCoordinator>a{
+    color: white;
+    text-decoration: underline;
+}
+.teams {
+   width: 100%;
+   position: fixed;
+   top: 10%;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+}
+.paragraphAndArrow{
+    display: flex;
+    justify-content: space-between;
+}
+.teams>.eachTeamOption>a>i{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.fa-caret-right{
+    font-size: 50px;
+    margin-right: 10px;
+}
+.eachTeamOption:active {
+    background-color: rgb(102, 153, 153);
+    color: lemonchiffon;
+}
+.teams>.eachTeamOption>a>p{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+.eachTeamOption{
+    text-align: left;
+    color: white;
+    background: rgb(6, 74, 94, 0.6);
+    font-size: 35px;
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+}
+.chat{
+    height: 72%;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    background:rgba(245,245,245, 0.9);
+    top: 10%;
+    overflow: auto;
+    }
+
+.inputs{
+height: 10%;
+min-height: 10%;
+display: flex;
+margin: 0;
+position: fixed;
+bottom: 8%;
+width: 100%;
+break-inside: 
+
+}
+.inputs>input{
+    width: 90%;
+    height: 80%;
+    border-color: transparent;
+}
+.inputs>a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inputs>.fa-chevron-circle-right{
+    font-size: 35px;
+    width: 10%;
+    background-color: white;
+    align-self: flex-start; 
+    height: 80%;
+}
+.loadingPost{
+    background: rgb(6, 74, 94,0.7);
+    color: white;
+    border-radius: 25px;
+    padding-left: 15px;
+    border: solid 1px white;
+    word-wrap: break-word;
+    }
+
+.loadingPostOther{
+    background: rgb(240,247,218,0.7);
+    color: rgb(6, 74, 94);
+    border: solid 1px white;
+    border-radius: 25px;
+    padding-left: 15px;
+    max-width: 100%;
+    word-wrap: break-word;
+
+}
+.postText{
+    margin: 0px;
+    
+}
+.textTimestamp{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.textTimestamp>.timestamp{
+    align-self: flex-end;
+    }
+.textTimestampOther{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.textTimestampOther>.timestamp{
+    align-self: flex-start;
+    }
+.profilePicName{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.profilePicName>.postName{
+    
+    align-self: flex-start;
+    margin: 0px;
+    color: rgb(6, 74, 94);
+}
+.profilePicNameOther{
+    margin-left: 20%;
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.profilePicNameOther>.postName{
+    align-self: flex-start;
+    margin: 0px;
+    color: rgb(6, 74, 94);
+}
+.anotherFlex{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.otherProfile{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+}
+.otherProfile>.postName{
+    align-self: flex-start;
+    margin: 0px;
+    color: rgb(6, 74, 94);
+}
+.chat img{
+ width: 15%;
+}
+
+
+.logInScreen {
+   width: 100%;
+   position: fixed;
+   top: 10%;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+}
+.flexMailPassword {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flexRegisterLogIn {
+    display: flex;
+    justify-content: center;
+}
+.emailPassword {
+    width: 250px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+.LogInElementsSize {
+    margin-top: 5px;
+    height: 40px;
+    width: 123px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 2px;
+}
+.marginBottom{
+    margin-bottom: 0px;
+}
+.flow{
+    height: 100%;
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+.allTheLocations {
+   width: 100%;
+   position: fixed;
+   top: 10%;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+}
+select{
+    margin-bottom: 2%;
+}
+iframe {
+    height: 70%;
+    width: 100%;
+}
+
+.bottomBar {
+    background: rgb(6, 74, 94, 0.8);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.click {
+    font-size: 38px;
+}
+
+.fa-sign-in-alt,
+.fa-home,
+.fa-info {
+    font-size: 38px;
+}
+
+.fa-sign-in-alt,
+.fa-home,
+.fa-info {
+    color: white;
+}
+
+.whiteColor {
+    text-decoration: none;
+    color: white;
+}
+@media screen and (min-width: 450px) {
+    body {
+    height: 100vh;
+    font-family: "Gill Sans MT";
+    background-image: url(nysl_logo_landscape.jpg);
+    background-repeat: no-repeat;
+    background-color: #1d5435;
+    background-attachment: fixed;
+    background-position: center;
+    padding-bottom: 10%;
+    }
+    .menuBar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 20%;
+    z-index: 1;
+    background: rgb(6, 74, 94, 0.8);
+    text-align: center;
+    font-size: 38px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.shieldAndMapsAndSchedule,
+.moreInfo,
+.teams,
+.logInScreen,
+.allTheLocations,
+.chat{
+    height: 60%;
+}
+.shieldAndMapsAndSchedule{
+    width: 100%;
+    position: fixed;
+    top: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+.bottomBar {
+    background: rgb(6, 74, 94, 0.8);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+a.col-4, click {
+        align-self: center;
+    }
+.moreInfo {
+    margin-left: 10%;
+    text-align: center;
+    width: 80%;
+    position: fixed;
+    top: 20%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.teams {
+   width: 70%;
+   position: fixed;
+   top: 20%;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+    margin-left: 15%;
+}
+.paragraphAndArrow{
+    display: flex;
+    justify-content: space-between;
+}
+.teams>.eachTeamOption>a>i{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.fa-caret-right{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.eachTeamOption:active {
+    background-color: rgb(102, 153, 153);
+    color: lemonchiffon;
+}
+.teams>.eachTeamOption>a>p{
+    margin-left: 10px;
+}
+.eachTeamOption{
+    line-height: 25px;
+    text-align: left;
+    color: white;
+    background: rgb(6, 74, 94, 0.6);
+    font-size: 25px;
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+}
+.flow{
+    height: 100%;
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    }
+td{
+    width: 25%;    
+    }
+    
+.allTheLocations {
+   width: 100%;
+   position: fixed;
+   top: 20%;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+    
+}
+iframe {
+    height: 70%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+select{
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 1%
+    }
+.chat{
+    height: 52%;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    background:rgba(245,245,245, 0.9);
+    top: 20%;
+    overflow: auto;
+    }
+.inputs{
+height: 10%;
+display: flex;
+position: fixed;
+bottom: 20%;
+width: 100%;
+}
+.inputs>input{
+    width: 90%;
+    height: 100%;
+    border-color: transparent;
+}
+.inputs>a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+}
+.inputs>.fa-chevron-circle-right{
+    font-size: 25px;
+    width: 10%;
+    background-color: white;
+    align-self: flex-start; 
+    height: 100%;
+}
+.chat img{
+ width: 10%;
+}
+}    
+
+
+
+

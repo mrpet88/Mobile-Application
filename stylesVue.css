@@ -1,0 +1,208 @@
+body {
+    font-family: "Gill Sans MT";
+    height: 100%;
+    background: rgba(46, 139, 87);
+    background-image: url(nysl_logo.png),url(layerTransparent.png);
+    background-repeat: no-repeat,repeat;
+    background-position: right,center;
+    background-size: contain,cover;
+}
+
+.menuBar{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    background: rgb(102, 153, 153,0.8);
+    text-align: center;
+    font-size: 38px;
+    line-height: 65px;
+    color: white;
+    border: solid 1px black;
+    z-index: 1;
+    }
+.shieldAndMapsAndSchedule{
+ background-image: url(layerTransparent.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+.fa-shield-alt,.fa-map,.fa-calendar-alt{
+    color: white;
+}
+.fa-shield-alt:active{
+color: rgb(102, 153, 153);
+}
+.fa-map:active{
+color: rgb(102, 153, 153);
+}
+.fa-calendar-alt:active{
+color: rgb(102, 153, 153);
+}
+.alignSelf{
+    align-self: center;
+}
+.colorWhite{
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+.paragraph{
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-caret-left{
+    font-size: 65px;
+}
+.fa-shield-alt,.fa-map,.fa-calendar-alt {
+    font-size: 75px;
+}
+.schedule{
+    text-align: center;
+    color: white;
+}
+.moreInfo{
+    margin-top: 65px;
+    height: 500px;
+    background-image: url(layerTransparent.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.flexPlaceholderSend{
+    display: flex;
+    flex-direction: column;
+}
+.SendButton{
+    width: 100px;
+    align-self: flex-end;
+}
+.textOfCoordinator{
+    text-align: center;
+}
+.flexPhoneMail{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+   width: 100%;
+    height: 150px;
+}
+
+.teams{
+    height: 60%;
+    background-image: url(layerTransparent.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+}
+.eachTeamOption{
+    font-size: 40px;
+    padding-left: 5px;
+    line-height: 65px;
+    color: white;
+    height: 65px;
+    border: solid 1px white;
+}
+.logInScreen{
+    height: 500px;
+    background-image: url(layerTransparent.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding-top: 200px;
+    }
+.flexMailPassword{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flexRegisterLogIn{
+    display: flex;
+    justify-content: center;
+}
+.emailPassword{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+.LogInElementsSize{
+    margin-top: 5px;
+    height: 40px;
+    width: 123px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 2px;
+    
+}
+
+
+table{
+    margin-top: 65px;
+    height: 180px;
+    border: solid 1px white;
+    background-image: url(layerTransparent.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.allTheLocations{
+    height: 100vh;
+    background-image: url(layerTransparent.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+iframe{
+    height: 50vh;
+    width: 100%;
+}
+select{
+    margin-top: 70px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
+
+td{
+    width: 25%;
+}
+
+.bottomBar{
+    background:rgb(102, 153, 153,0.8);
+    color: white;
+    border: solid 1px black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+   
+.click{
+    font-size: 45px;
+}
+.fa-comment,.fa-home{
+    font-size: 45px;
+}
+.fa-comment,.fa-home,.fa-info{
+    color: white;
+}
+.whiteColor{
+    text-decoration: none;
+    color: white;
+}
+
+

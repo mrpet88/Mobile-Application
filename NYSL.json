@@ -1,0 +1,43 @@
+{
+    "leagueName": "NYSL League",
+    "homeTown": "Chicago's northside",
+    "formed": 1996,
+    "leagueContact": "nysl@chisoccer.org",
+    "leagueCoordinator": "Michael Randall",
+    "leagueCoordinatorCommunication": ["6306908132", "michael.randall@chisoccer.org"],
+    "monthsPlaying": ["September", "October"],
+    "teams":["U1","U2","U3","U4","U5","U6"],
+    "months": [
+        {
+            "month": "September",
+            "days": {
+                "0": ["09/01", "U1 and U4", "AJ Katzenmaier", "9:30 a.m.","https://goo.gl/maps/vr8ekDWA3sp"],
+                "1": [" ", "U3 and U2", "Greenbay", "1:00 p.m.","https://goo.gl/maps/TWot9HSEmdP2"],
+                "2": ["09/08", "U5 and U6", "Howard A Yeager", "9:30 a.m.","https://goo.gl/maps/twSZ9vaWECs"],
+                "3": [" ", "U6 and U1", "Marjorie P Hart", "1:00 p.m.","https://goo.gl/maps/q8b69FGpf232"],
+                "4": ["09/15", "U2 and U4", "North", "9:30 a.m.","https://goo.gl/maps/uMwLSYJJ7or"],
+                "5": [" ", "U3 and U5", "AJ Katzenmaier	", "1:00 p.m.","https://goo.gl/maps/BZfbxZfdg2t"],
+                "6": ["09/22", "U1 and U3", "South", "9:30 a.m.","https://goo.gl/maps/VDKgkDJDFZ32" ],
+                "7": [" ", "U2 and U6", "Howard A Yeager", "1:00 p.m.","https://goo.gl/maps/twSZ9vaWECs"],
+                "8": ["09/29", "U4 and U5", "Greenbay", "9:30 a.m.","https://goo.gl/maps/TWot9HSEmdP2"]
+            }
+        },
+        {
+            "month": "October",
+            "days": {
+                "0": ["09/01", "U1 and U4", "AJ Katzenmaier", "9:30 a.m.","https://goo.gl/maps/BZfbxZfdg2t"],
+                "1": [" ", "U3 and U2", "Greenbay", "1:00 p.m.","https://goo.gl/maps/TWot9HSEmdP2"],
+                "2": ["09/08", "U5 and U6", "Howard A Yeager", "9:30 a.m.","https://goo.gl/maps/twSZ9vaWECs"],
+                "3": [" ", "U6 and U1", "Marjorie P Hart", "1:00 p.m.","https://goo.gl/maps/q8b69FGpf232"],
+                "4": ["09/15", "U2 and U4", "North", "9:30 a.m.","https://goo.gl/maps/uMwLSYJJ7or"],
+                "5": [" ", "U3 and U5", "AJ Katzenmaier	", "1:00 p.m.","https://goo.gl/maps/BZfbxZfdg2t"],
+                "6": ["09/22", "U1 and U3", "South", "9:30 a.m.","https://goo.gl/maps/VDKgkDJDFZ32" ],
+                "7": [" ", "U2 and U6", "Howard A Yeager", "1:00 p.m.","https://goo.gl/maps/twSZ9vaWECs"],
+                "8": ["09/29", "U4 and U5", "Greenbay", "9:30 a.m.","https://goo.gl/maps/TWot9HSEmdP2"]
+            }
+        }
+]
+}
+
+
+

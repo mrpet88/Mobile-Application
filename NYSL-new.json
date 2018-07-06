@@ -1,0 +1,49 @@
+{
+    "leagueName": "NYSL League",
+    "homeTown": "Chicago's northside",
+    "formed": 1996,
+    "leagueContact": "nysl@chisoccer.org",
+    "leagueCoordinator": "Michael Randall",
+    "leagueCoordinatorCommunication": ["6306908132", "michael.randall@chisoccer.org"],
+    "monthsPlaying": ["September", "October"],
+    "months": [
+        {
+            "month": "September",
+            "number": 09,
+            "days": [
+                {
+                    "01": [
+                        {
+                            "game": "U1 and U4",
+                            location: "AJ Katzenmaier",
+                            "time": "9:30 a.m."
+                    }, {}]
+                }
+            ],
+            "0": ["09/01", "U1 and U4", "AJ Katzenmaier", "9:30 a.m."],
+            "1": ["09/01", "U3 and U2", "Greenbay", "1:00 p.m."],
+            "2": ["09/08", "U5 and U6", "Howard A Yeager", "9:30 a.m."],
+            "3": ["09/08", "U6 and U1", "Marjorie P Hart", "1:00 p.m."],
+            "4": ["09/15", "U2 and U4", "North", "9:30 a.m."],
+            "5": ["09/15", "U3 and U5", "AJ Katzenmaier	", "1:00 p.m."],
+            "6": ["09/22", "U1 and U3", "South", "9:30 a.m."],
+            "7": ["09/22", "U2 and U6", "Howard A Yeager", "1:00 p.m."],
+            "8": ["09/29", "U4 and U5", "Greenbay", "9:30 a.m."]
+
+        },
+        {
+            "month": "October",
+            "days": {
+                "0": ["09/01", "U1 and U4", "AJ Katzenmaier", "9:30 a.m."],
+                "1": ["09/01", "U3 and U2", "Greenbay", "1:00 p.m."],
+                "2": ["09/08", "U5 and U6", "Howard A Yeager", "9:30 a.m."],
+                "3": ["09/08", "U6 and U1", "Marjorie P Hart", "1:00 p.m."],
+                "4": ["09/15", "U2 and U4", "North", "9:30 a.m."],
+                "5": ["09/15", "U3 and U5", "AJ Katzenmaier	", "1:00 p.m."],
+                "6": ["09/22", "U1 and U3", "South", "9:30 a.m."],
+                "7": ["09/22", "U2 and U6", "Howard A Yeager", "1:00 p.m."],
+                "8": ["09/29", "U4 and U5", "Greenbay", "9:30 a.m."]
+            }
+        }
+]
+}
